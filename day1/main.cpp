@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
 #include "teacher.h"
+#include "array.h"
 
-int main(int argc, char **argv)
+void TestTeacher()
 {
-    std::cout << "Starting "  << argv[0]<< std::endl;
+   
     
     Teacher t1("François", "Vincent", 52); 
  //   t1.setIdentity("François", "Vincent", 52);
@@ -21,6 +22,32 @@ int main(int argc, char **argv)
     }
     
     std::cout << "Nombre de profs: " << Teacher::getTeachersNumber() << std::endl;
+}
+
+void TestArray()
+{
+    Array a(5);
+    
+    a.show();
+    
+    Array b(10);
+    
+    b.show();
+    
+    a = b;
+    
+    a.show();
+    
+}
+
+int main(int argc, char **argv)
+{
+     std::cout << "Starting "  << argv[0]<< std::endl;
+     
+  //  TestTeacher();
+    
+    
+    TestArray();
     
     return 0;
 }
